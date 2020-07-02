@@ -7,7 +7,6 @@ import { OrdinateurComponent } from './components/ordinateur/ordinateur.componen
 import {FormsModule} from "@angular/forms";
 import { AddOrdinateurComponent } from './components/add-ordinateur/add-ordinateur.component';
 import { EditOrdinateurComponent } from './components/edit-ordinateur/edit-ordinateur.component';
-import { DeleteOrdinateurComponent } from './components/delete-ordinateur/delete-ordinateur.component';
 import {HttpClientModule} from "@angular/common/http";
 import { DetailOrdinateurComponent } from './components/detail-ordinateur/detail-ordinateur.component';
 import { MenuComponent } from './components/menu/menu.component';
@@ -18,7 +17,6 @@ import { MenuComponent } from './components/menu/menu.component';
     OrdinateurComponent,
     AddOrdinateurComponent,
     EditOrdinateurComponent,
-    DeleteOrdinateurComponent,
     DetailOrdinateurComponent,
     MenuComponent
   ],
