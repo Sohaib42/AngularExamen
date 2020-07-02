@@ -1,0 +1,27 @@
+<h1>Nombre d'ordinateur en stock : {{ordinateurs.length}}</h1>
+<table *ngFor='let element of ordinateurs'>
+
+    <tr>
+      <th>Modèle</th>
+      <th>Marque</th>
+      <th>Prix de vente</th>
+      <th>Détail</th>
+      <th>Indice de rentabilité</th>
+    </tr>
+
+    <tr>
+      <td>{{element.modele}}</td>
+      <td>{{element.marque}}</td>
+      <td>{{element.prixVente}}</td>
+      <td><a routerLink='/computers/{{element.id}}'>En savoir plus</a></td>
+      <td>{{element.prixVente - element.prixAchat}}€</td>
+    </tr>
+<!--  <p>Modele : {{element.modele}}</p>-->
+<!--  <p>Marque : {{element.marque}}</p>-->
+<!--  <p>Prix : {{element.prixVente}}€</p>-->
+<!--  <p>Catégorie : {{element.category}}</p>-->
+<!--  <p>Type : {{element.type}}</p>-->
+<!--  <a routerLink='/computers/{{element.id}}'>Plus de détail ici..</a>-->
+<!--  <br>-->
+  <button (click)="deleteOrdinateur(element)">Supprimer cet planète</button>
+</table>

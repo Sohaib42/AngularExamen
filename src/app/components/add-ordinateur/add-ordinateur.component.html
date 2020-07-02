@@ -1,0 +1,64 @@
+<h1>Ajout d'un nouveau ordinateur</h1>
+<form #ordinateurForm="ngForm" (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="modele">Modele</label>
+    <input type="text" class="form-control" id="modele" name="modele" [(ngModel)]='ordinateur.modele' #modele="ngModel"/>
+    <p [hidden]="modele.valid" class="alert alert-danger">Saisis un nom valide</p>
+  </div>
+  <div class="form-group">
+    <label for="Marque">Marque</label>
+    <div class="form-check">
+      <input class='form-check-input' type="radio" id='marque1' name='marque' value='Dell' [(ngModel)]='ordinateur.marque' #marque ='ngModel'/>
+      <label class='form-check-label' for="marque1">Dell</label>
+    </div>
+    <div class="form-check">
+      <input class='form-check-input' type="radio" id='marque2' name='marque' value='HP' [(ngModel)]='ordinateur.marque' #marque ='ngModel'/>
+      <label class='form-check-label' for="marque2">HP</label>
+    </div>
+    <div class="form-check">
+      <input class='form-check-input' type="radio" id='marque3' name='marque' value='Apple'  [(ngModel)]='ordinateur.marque' #marque ='ngModel'/>
+      <label class='form-check-label' for="marque3">Apple</label>
+    </div>
+    <div class="form-check">
+      <input class='form-check-input' type="radio" id='marque4' name='marque' value='Asus'  [(ngModel)]='ordinateur.marque' #marque ='ngModel'/>
+      <label class='form-check-label' for="marque4">Asus</label>
+    </div>
+  </div>
+  <div class="form-check">
+    <label for="type">Type : </label><br>
+    <select #type="ngModel" name="type" required [(ngModel)]="ordinateur.type">
+      <option>Fixe</option>
+      <option>Portable</option>
+      <option>Tablette hybride</option></select>
+    <div [hidden]="type.valid" class="alert alert-danger">Le contenu est requis</div>
+  </div>
+  <div class="form-group">
+    <label for="category">Catégorie :</label>
+    <div class="form-check">
+      <input class='form-check-input' type="radio" id='category1' name='category' value='Gaming' [(ngModel)]='ordinateur.category' #category ='ngModel'/>
+      <label class='form-check-label' for="category1">Gaming</label>
+    </div>
+    <div class="form-check">
+      <input class='form-check-input' type="radio" id='category2' name='category' value='Bureautique' [(ngModel)]='ordinateur.category' #category ='ngModel'/>
+      <label class='form-check-label' for="category2">Bureautique</label>
+    </div>
+    <div class="form-check">
+      <input class='form-check-input' type="radio" id='category3' name='category' value='Premier Prix'  [(ngModel)]='ordinateur.category' #category ='ngModel'/>
+      <label class='form-check-label' for="category3">Premier prix</label>
+    </div>
+  </div>
+  <div class="form-group">
+  <label for="dateRelease">Date de mise en stock :</label> <br>
+  <input type="datetime-local"id="dateRelease" name="dateRelease" [(ngModel)]="ordinateur.dateEntreStock" #dateEntreStock ='ngModel'/>
+  </div>
+  <div class="form-group">
+    <label for="prixAchat">Prix d'achat :</label> <br>
+    <input type="number" id="prixAchat" name="prixAchat"[(ngModel)]="ordinateur.prixAchat"/>
+  </div>
+  <div class="form-group">
+    <label for="prixVente">Prix de vente :</label> <br>
+    <input type="number" id="prixVente" name="prixVente"[(ngModel)]="ordinateur.prixVente"/>
+  </div>
+  <input [disabled]="!ordinateurForm.valid" class="btn btn-success" type="submit">
+</form>
+

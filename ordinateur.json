@@ -1,0 +1,44 @@
+{
+  "ordinateur": [
+    {
+      "id": 1,
+      "modele": "21232",
+      "marque": "Dell",
+      "type": "Fixe",
+      "category": "Gaming",
+      "prixAchat": 234,
+      "prixVente": 260,
+      "dateEntreStock": "2020-07-02T14:37"
+    },
+    {
+      "id": 2,
+      "modele": "MonOrdinateur",
+      "marque": "Dell",
+      "type": "Portable",
+      "category": "Bureautique",
+      "prixAchat": 12,
+      "prixVente": 233,
+      "dateEntreStock": "2020-07-02T14:38"
+    },
+    {
+      "id": 3,
+      "modele": "Latitude 3500 - 15.6",
+      "marque": "Apple",
+      "type": "Portable",
+      "category": null,
+      "prixAchat": 100,
+      "prixVente": 2342,
+      "dateEntreStock": "2020-07-07T14:42"
+    },
+    {
+      "id": 4,
+      "modele": "SaulsGood",
+      "marque": "Apple",
+      "type": "Portable",
+      "category": "Gaming",
+      "prixAchat": 122,
+      "prixVente": 3333,
+      "dateEntreStock": "2020-07-02T14:51"
+    }
+  ]
+}
